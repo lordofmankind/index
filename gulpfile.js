@@ -1,17 +1,19 @@
-const gulp = require ('gulp');
-const browserSync = require('browser-sync').create();
+const gulp = require("gulp");
+const cleanCSS = require("gulp-clean-css");
 
-gulp.task ('hello' , function(done)  {
-    console.log ('Привет, мир!');
-    done();
+function minifyCSS() {
+  return (
+    gulp
+      .src("./css/*.css")
+      .pipe(cleanCSS())
+      .pipe(gulp.dest("minified"))
+  );
+}
+
+gulp.task("minify-css", minifyCSS);
+
+gulp.task("watch", () => {
+  gulp.watch("./css/*.css", minifyCSS);
 });
 
-// Static server
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-    gulp.watch("./*.html").on('change', browserSync.reload);
-});
+gulp.task('default', gulp.series('minify-css', 'watch'));
