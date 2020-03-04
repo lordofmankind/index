@@ -10,6 +10,7 @@ function bs() {
             baseDir: "./"
         }
     });
+<<<<<<< HEAD
     watch("./*.html").on('change', browserSync.reload);
     watch("./sass/**/*.sass", serveSass);
     watch("./js/*.js").on('change', browserSync.reload);
@@ -23,3 +24,7 @@ function serveSass() {
 };
 
 exports.serve = bs;
+=======
+    gulp.watch("./*.html").on('change', browserSync.reload);
+});
+>>>>>>> 7fb25b66c1830777c79e941e37164edfc8618630
