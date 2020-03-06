@@ -21,9 +21,7 @@ function bs() {
 function serveSass() {
     return src("./sass/**/*.sass", "./sass/**/*.sass")
         .pipe(sass())
-        .pipe(autoprefixer({
-            cascade: false
-        }))
+
         .pipe(dest("./css"))
         .pipe(browserSync.stream());
 };
