@@ -410,7 +410,7 @@ body {
   .hero__text {
     font-size: 1.57rem;
     min-width: 500px; }
-  .hero__button {
+  .hero button {
     margin-right: 20px; }
   .hero__instagram {
     position: absolute;
@@ -497,11 +497,11 @@ body {
     margin-left: 0; } }
 
 @media screen and (max-width: 570px) {
-  .contacts__phone {
+  .button__phone {
     margin-right: 0;
     color: #fff;
     text-decoration: none; }
-  .contacts__button {
+  .button__contacts {
     display: none; }
   .title {
     font-size: 1.64rem; }
