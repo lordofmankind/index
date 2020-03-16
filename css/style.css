@@ -328,7 +328,7 @@ template {
   justify-content: space-between; }
 
 .col-30 {
-  flex-basis: 30%; }
+  flex-basis: 31.72%; }
 
 .col-50 {
   width: 50%; }
@@ -420,7 +420,7 @@ img {
   color: #fff;
   text-transform: none;
   text-transform: uppercase;
-  margin-right: 2.5rem;
+  margin-right: 2.65rem;
   transition: color 0.2s;
   text-decoration: none; }
   .nav__item:hover {
@@ -462,7 +462,8 @@ img {
   .hero__content {
     position: relative;
     max-width: 47.85rem;
-    margin-left: 4.28rem; }
+    margin-left: 2.2rem;
+    margin-top: 6rem; }
   .hero__text {
     font-size: 1.57rem;
     max-width: 500px;
@@ -479,6 +480,8 @@ img {
     max-width: 82px;
     left: 0;
     top: 0;
+    padding-top: 150px;
+    padding-left: 0px;
     height: 100%; }
   .hero__scroll-down {
     position: absolute;
@@ -746,10 +749,6 @@ img {
   .swiper-button-next::after {
     display: none; }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  width: auto;
-  bottom: 0; }
-
 .section {
   padding: 60px 0; }
   .section--dark {
@@ -781,6 +780,10 @@ img {
       max-width: 31.57rem;
       text-transform: none; }
 
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: 0; }
+
 @media screen and (max-width: 1244px) {
   html {
     font-size: 12px; }
@@ -795,6 +798,14 @@ img {
   .hero__content {
     margin-left: 0; } }
 
+@media screen and (max-width: 900px) {
+  .types__card {
+    margin-bottom: 5rem; }
+  .card__title {
+    font-size: 12px; }
+  .card__pricetag {
+    font-size: 12px; } }
+
 @media screen and (max-width: 760px) {
   .row {
     flex-direction: column;
@@ -802,7 +813,11 @@ img {
   .types__card {
     margin-bottom: 5rem; }
   .card {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .col-50 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center; } }
 
 @media screen and (max-width: 575px) {
   .contacts__button {
